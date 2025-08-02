@@ -6,6 +6,14 @@
   background-color: darkblue;
   height: 800px;
 
+
+  @include media("mobile-l") {
+    height: 600px;
+  }
+
+  @include media("mobile-s") {
+    height: 500px;
+  }
   &__summer {
     padding: 0 20px;
     width: 320px;
@@ -13,6 +21,21 @@
     border: 2px solid orangered;
     margin: 10px;
     font-size: 24px;
+
+    @include media("mobile-l") {
+      width: 300px;
+      font-size: 22px;
+    }
+
+    @include media("mobile-m") {
+      width: 250px;
+      font-size: 22px;
+    }
+
+    @include media("mobile-s") {
+      width: 230px;
+      font-size: 22px;
+    }
   }
 
   &__block {
@@ -20,6 +43,20 @@
     height: 550px;
     background-color: darkgrey;
     padding: 20px 20px;
+
+    @include media("mobile-l") {
+      width: 350px;
+    }
+
+    @include media("mobile-m") {
+      width: 300px;
+      height: 430px;
+    }
+
+    @include media("mobile-s") {
+      width: 280px;
+      height: 430px;
+    }
   }
 
   &__box {
@@ -37,6 +74,18 @@
       color: white;
     }
 
+    @include media("mobile-l") {
+      width: 70px;
+      height: 70px;
+      font-size: 24px;
+    }
+
+    @include media("mobile-m") {
+      width: 60px;
+      height: 60px;
+      font-size: 22px;
+    }
+
     &-functional {
       @extend %btn-base;
       color: green;
@@ -44,6 +93,18 @@
       @include hover-supported {
         background-color: green;
         color: white;
+      }
+
+      @include media("mobile-l") {
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+      }
+
+      @include media("mobile-m") {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
       }
     }
 
@@ -55,6 +116,19 @@
         background-color: red;
         color: white;
       }
+
+      @include media("mobile-l") {
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+      }
+
+      @include media("mobile-m") {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+      }
+
     }
 
     &-result {
@@ -66,6 +140,19 @@
         background-color: white;
         color: green;
       }
+
+      @include media("mobile-l") {
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+      }
+
+      @include media("mobile-m") {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+      }
+
     }
 
 
