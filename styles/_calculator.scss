@@ -1,30 +1,73 @@
-.calculator {
+@use "./abstracts" as *;
 
+.calculator {
+  align-items: center;
+  display: flex;
+  background-color: darkblue;
+  height: 800px;
 
   &__summer {
-
+    padding: 0 20px;
+    width: 320px;
+    height: 60px;
+    border: 2px solid orangered;
+    margin: 10px;
+    font-size: 24px;
   }
 
   &__block {
-
+    width: 400px;
+    height: 550px;
+    background-color: darkgrey;
+    padding: 20px 20px;
   }
 
   &__box {
-
+    column-gap: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 10px;
   }
 
   &__btn {
+    @extend %btn-base;
 
-    &-function {
+    @include hover-supported {
+      background-color: orangered;
+      color: white;
+    }
 
+    &-functional {
+      @extend %btn-base;
+      color: green;
+
+      @include hover-supported {
+        background-color: green;
+        color: white;
+      }
     }
 
     &-clear {
+      @extend %btn-base;
+      color: red;
 
+      @include hover-supported {
+        background-color: red;
+        color: white;
+      }
     }
 
     &-result {
+      @extend %btn-base;
+      background-color: green;
+      color: white;
 
+      @include hover-supported {
+        background-color: white;
+        color: green;
+      }
     }
+
+
   }
 }
