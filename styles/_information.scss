@@ -1,0 +1,179 @@
+@use "abstracts" as *;
+
+.information {
+  height: 400px;
+  background-color: green;
+  align-items: center;
+  text-align: center;
+  display: flex;
+
+  @include media("laptop") {
+    height: 300px;
+  }
+
+  @include media("tablet-x") {
+    height: 250px;
+  }
+
+  @include media("tablet") {
+    height: 200px;
+  }
+
+  @include media("phablet") {
+    height: 180px;
+  }
+
+  @include media("mobile-l") {
+    height: 150px;
+  }
+
+  @include media("mobile-m") {
+    height: 120px;
+  }
+
+  @include media("mobile-s") {
+    height: 100px;
+  }
+
+  &__title {
+    font-size: 48px;
+    color: orangered;
+    margin-bottom: 20px;
+
+    @include media("laptop") {
+      font-size: 42px;
+    }
+
+    @include media("tablet-x") {
+      margin-bottom: 10px;
+      font-size: 36px;
+    }
+
+    @include media("tablet") {
+      font-size: 32px;
+    }
+
+    @include media("phablet") {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    @include media("mobile-x") {
+      font-size: 22px;
+    }
+
+    @include media("mobile-l") {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    @include media("mobile-m") {
+      font-size: 16px;
+    }
+
+    @include media("mobile-s") {
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+
+    @include media("laptop") {
+      font-size: 22px;
+    }
+    @include media("tablet-x") {
+      font-size: 18px;
+    }
+
+    @include media("tablet") {
+      font-size: 16px;
+    }
+    @include media("phablet") {
+      font-weight: 400;
+    }
+
+    @include media("mobile-x") {
+      font-size: 14px;
+    }
+
+    @include media("mobile-l") {
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    @include media("mobile-m") {
+      font-size: 10px;
+    }
+
+
+    @include media("mobile-s") {
+      font-size: 8px;
+    }
+
+  }
+
+  &__popup-btn {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 16px;
+    border: 1px solid orangered;
+
+    @include hover-supported {
+      width: 250px;
+      height: 60px;
+      color: orangered;
+      font-size: 18px;
+      border-radius: 18px;
+    }
+
+    @include media("tablet-x") {
+      width: 180px;
+      height: 45px;
+    }
+
+    @include media("tablet-x") {
+      width: 150px;
+      height: 40px;
+      font-size: 14px;
+    }
+
+    @include media("phablet") {
+      margin-top: 10px;
+    }
+
+    @include media("mobile-x") {
+      width: 100px;
+      height: 30px;
+      border-radius: 14px;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+    @include media("mobile-l") {
+      width: 80px;
+      height: 25px;
+      font-size: 10px;
+    }
+
+    @include media("mobile-m") {
+      width: 60px;
+      height: 20px;
+      font-size: 8px;
+    }
+
+    @include media("mobile-s") {
+      width: 40px;
+      height: 15px;
+      font-size: 5px;
+      font-weight: 300;
+    }
+  }
+}

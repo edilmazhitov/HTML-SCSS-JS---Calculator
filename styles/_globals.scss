@@ -1,12 +1,19 @@
+@use "./abstracts" as *;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   list-style-type: none;
-  text-display: none;
+  text-decoration: none;
 }
 
 .container {
   max-width: 1200px;
+  padding: 0 20px;
   margin: 0 auto;
+}
+
+a,button,input {
+  cursor: pointer;
 }
