@@ -74,39 +74,42 @@
     <section class="calculator">
       <div class="container">
         <div class="calculator__block">
-          <input type="text" class="calculator__summer">
+          <input type="text" class="calculator__summer" id="summer-display">
           <div class="calculator__box">
-            <button class="calculator__btn-clear">C</button>
+            <button class="calculator__btn-clear" id="clear-btn">C</button>
             <button class="calculator__btn-functional">()</button>
-            <button class="calculator__btn-functional">%</button>
-            <button class="calculator__btn-functional">/</button>
+            <button class="calculator__btn-functional" id="degree">**</button>
+            <button class="calculator__btn-functional" id="divisions">/</button>
           </div>
           <div class="calculator__box">
-            <button class="calculator__btn" id="7">7</button>
-            <button class="calculator__btn" id="8">8</button>
-            <button class="calculator__btn" id="9">9</button>
+            <button class="calculator__btn numbers">7</button>
+            <button class="calculator__btn numbers">8</button>
+            <button class="calculator__btn numbers">9</button>
             <button class="calculator__btn-functional" id="multiplication">*</button>
           </div>
           <div class="calculator__box">
-            <button class="calculator__btn" id="4">4</button>
-            <button class="calculator__btn" id="5">5</button>
-            <button class="calculator__btn" id="6">6</button>
-            <button class="calculator__btn-functional" id="minus">-</button>
+            <button class="calculator__btn numbers">4</button>
+            <button class="calculator__btn numbers">5</button>
+            <button class="calculator__btn numbers">6</button>
+            <button class="calculator__btn-functional" id="subtraction">-</button>
           </div>
           <div class="calculator__box">
-            <button class="calculator__btn" id="one">1</button>
-            <button class="calculator__btn" id="two">2</button>
-            <button class="calculator__btn" id="tree">3</button>
-            <button class="calculator__btn-functional" id="plus">+</button>
+            <button class="calculator__btn numbers">1</button>
+            <button class="calculator__btn numbers">2</button>
+            <button class="calculator__btn numbers">3</button>
+            <button class="calculator__btn-functional" id="addition">+</button>
           </div>
           <div class="calculator__box">
-            <button class="calculator__btn" id="zero">0</button>
+            <button class="calculator__btn numbers">0</button>
             <button class="calculator__btn" id="comma">,</button>
             <button class="calculator__btn-result" id="result">=</button>
           </div>
         </div>
+
       </div>
     </section>
   </main>
+
+<script src="./scripts/calculator.js" type="module"></script>
 </body>
 </html>

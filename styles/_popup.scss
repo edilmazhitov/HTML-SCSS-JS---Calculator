@@ -1,0 +1,75 @@
+@use "abstracts" as *;
+
+
+.overlay {
+  opacity: 0;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.information-popup {
+  opacity: 0;
+  inset: 0;
+  width: 500px;
+  height: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title,
+  &__author {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__author {
+    font-size: 16px;
+  }
+
+  &__descriptions {
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  &__close {
+    margin-top: 100px;
+    width: 150px;
+    height: 40px;
+    border-radius: 16px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid black;
+
+    @include hover-supported {
+      width: 200px;
+      height: 50px;
+      background-color: orangered;
+      color: white;
+    }
+  }
+
+}
+.information-popup.open, .overlay.open{
+  opacity: 1;
+  visibility: visible;
+}
