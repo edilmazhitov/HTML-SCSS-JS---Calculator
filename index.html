@@ -66,7 +66,7 @@
             Тут вы можете решать математические задачи такие как: <br>
             прибавление, убавление, умножение,возведение степени и т.д
           </p>
-          <button class="information__popup-btn">
+          <button class="information__popup-btn" id="open-popup">
               Информация
           </button>
       </div>
@@ -77,8 +77,8 @@
           <input type="text" class="calculator__summer" id="summer-display">
           <div class="calculator__box">
             <button class="calculator__btn-clear" id="clear-btn">C</button>
-            <button class="calculator__btn-functional">()</button>
-            <button class="calculator__btn-functional" id="degree">**</button>
+            <button class="calculator__btn-functional" id="clear-one-btn">CO</button>
+              <button class="calculator__btn-functional" id="degree">^</button>
             <button class="calculator__btn-functional" id="divisions">/</button>
           </div>
           <div class="calculator__box">
@@ -101,7 +101,7 @@
           </div>
           <div class="calculator__box">
             <button class="calculator__btn numbers">0</button>
-            <button class="calculator__btn" id="comma">,</button>
+            <button class="calculator__btn" id="comma">.</button>
             <button class="calculator__btn-result" id="result">=</button>
           </div>
         </div>
@@ -109,7 +109,22 @@
       </div>
     </section>
   </main>
-
+  <div class="overlay" id="popup-overlay">
+    <div class="information-popup" id="popup">
+      <h1 class="information-popup__title">
+        Калькулятор от Эдиля
+      </h1>
+      <h2 class="popup__author">
+        Разработчик: Мажитов Эдил.
+      </h2>
+      <p class="popup__information">
+        Этот калькулятор был создан в рамках учебного проекта с использованием HTML, CSS и JavaScript. <br>
+        Он позволяет выполнять базовые арифметические операции: сложение, вычитание, умножение, деление и вычисление степени.
+      </p>
+      <button class="information-popup__close" id="close-popup">Закрыть</button>
+    </div>
+  </div>
 <script src="./scripts/calculator.js" type="module"></script>
+<script src="./scripts/informationPopup.js" type="module"></script>
 </body>
 </html>

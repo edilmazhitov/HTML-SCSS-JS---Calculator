@@ -9,45 +9,57 @@ const degreeBtn = document.getElementById("degree");
 const commaBtn = document.getElementById("comma");
 const resultBtn = document.getElementById("result");
 const clearBtn = document.getElementById("clear-btn");
-
-
+const clearOneBtn = document.getElementById("clear-one-btn");
 const numbersButtons = document.querySelectorAll(".numbers");
+
+summerDisplay.value = 0;
 
 
 numbersButtons.forEach(number => {
   number.addEventListener("click", () => {
-    summerDisplay.value += number.textContent;
+    if (summerDisplay.value === "0") {
+      summerDisplay.value = number.textContent;
+    } else {
+      summerDisplay.value += number.textContent;
+    }
+
   })
 })
 
 
 additionBtn.addEventListener("click", () => {
-  if (summerDisplay.value != additionBtn.textContent && summerDisplay.value > 1 ) {
+  if (summerDisplay.value != additionBtn.textContent && summerDisplay.value >= 1 ) {
     summerDisplay.value += additionBtn.textContent;
   }
 })
 
 subtractionBtn.addEventListener("click", () => {
-  if (summerDisplay.value != subtractionBtn.textContent && summerDisplay.value > 1 ) {
+  if (summerDisplay.value != subtractionBtn.textContent && summerDisplay.value >= 1 ) {
     summerDisplay.value += subtractionBtn.textContent;
   }
 })
 
 multiplicationBtn.addEventListener("click", () => {
-  if (summerDisplay.value != multiplicationBtn.textContent && summerDisplay.value > 1 ) {
+  if (summerDisplay.value != multiplicationBtn.textContent && summerDisplay.value >= 1 ) {
     summerDisplay.value += multiplicationBtn.textContent;
   }
 })
 
 divisionsBtn.addEventListener("click", () => {
-  if (summerDisplay.value != divisionsBtn.textContent && summerDisplay.value > 1 ) {
+  if (summerDisplay.value != divisionsBtn.textContent && summerDisplay.value >= 1 ) {
     summerDisplay.value += divisionsBtn.textContent;
   }
 })
 
 commaBtn.addEventListener("click",() => {
-  if (summerDisplay.value != commaBtn.textContent && summerDisplay.value > 1) {
+  if (summerDisplay.value != commaBtn.textContent && summerDisplay.value >= 1) {
     summerDisplay.value += commaBtn.textContent;
+  }
+})
+
+degreeBtn.addEventListener("click", () => {
+  if (summerDisplay.value != degreeBtn.textContent && summerDisplay.value >= 1) {
+    summerDisplay.value += degreeBtn.textContent;
   }
 })
 
@@ -55,7 +67,7 @@ commaBtn.addEventListener("click",() => {
 resultBtn.addEventListener("click", () => {
   const expression = summerDisplay.value;
 
-  const match = expression.match(/^(\d+(?:\.\d+)?)([+\-*/])(\d+(?:\.\d+)?)$/);
+  const match = expression.match(/^(\d+(?:\.\d+)?)([+\-*/^])(\d+(?:\.\d+)?)$/);
 
   if (!match) {
     summerDisplay.value = summerDisplay.value;
@@ -79,6 +91,9 @@ resultBtn.addEventListener("click", () => {
     case '*':
       result = multiplication(a, b);
       break;
+    case '^':
+      result = degree(a,b);
+      break;
     case '/':
       if (b === 0) {
         alert("На ноль делить нельзя!");
@@ -94,5 +109,9 @@ resultBtn.addEventListener("click", () => {
 })
 
 clearBtn.addEventListener("click", () => {
-  summerDisplay.value = "";
+  summerDisplay.value = "0";
+})
+
+clearOneBtn.addEventListener("click", () => {
+  summerDisplay.value = summerDisplay.value.slice(0,-1)
 })
